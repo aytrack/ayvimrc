@@ -1,1 +1,1 @@
-## My vimrc to coding python.
+## My vimrc to code python.
