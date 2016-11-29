@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim' 
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
@@ -53,6 +54,7 @@ set t_Co=256
 let python_highlight_all = 1
 
 "Enables filetype detection
+filetype on
 filetype plugin indent on
 
 "No swap files
@@ -65,6 +67,7 @@ set nu
 set relativenumber
 
 "Set the mouse
+"set mouse=a
 set mouse=v
 
 "Number of spaces that a pre-existing tab is equal to.
@@ -90,8 +93,9 @@ set fileformat=unix
 "Make backspaces more powerfull
 set backspace=indent,eol,start
 
+set modifiable
 "auto use the vimrc after save.
-autocmd bufwritepost .vimrc source %
+"autocmd bufwritepost .vimrc source %
 
 "Split navigations
 nnoremap <C-J> <C-W><C-J>
