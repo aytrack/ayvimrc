@@ -21,7 +21,6 @@ Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 
@@ -39,6 +38,11 @@ Plugin 'honza/vim-snippets'
 
 "powerline
 Plugin 'Lokaltog/vim-powerline'
+
+
+"color
+Plugin 'kamwitsta/nordisk'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,7 +71,6 @@ set nu
 set relativenumber
 
 "Set the mouse
-"set mouse=a
 set mouse=v
 
 "Number of spaces that a pre-existing tab is equal to.
@@ -103,6 +106,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
 "Set the leader key to space
 let mapleader=" "
 
@@ -110,6 +118,7 @@ let mapleader=" "
 let g:Powerline_symbols = 'fancy'
 set fillchars+=stl:\ ,stlnc:\
 set laststatus=2
+set statusline+=%{fugitive#statusline()}
 let g:Powerline_colorscheme='solarized256'
 
 "NERDTree and NERDTree-tabs
@@ -127,6 +136,8 @@ let g:user_emmet_leader_key='<C-M>'
 
 "python checker
 let g:syntastic_python_checkers=['flake8']
+"auto open errors
+let g:syntastic_auto_loc_list = 1
 
 "Auto close preview
 "let g:ycm_autoclose_preview_window_after_completion=1
