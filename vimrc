@@ -21,7 +21,7 @@ Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 
@@ -38,7 +38,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 "powerline
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
+
+"color
+Plugin 'kamwitsta/nordisk'
+Plugin 'dracula/vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,13 +100,19 @@ set backspace=indent,eol,start
 
 set modifiable
 "auto use the vimrc after save.
-"autocmd bufwritepost .vimrc source %
+autocmd bufwritepost .vimrc source %
 
 "Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"Buffer select
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 
 "Set the leader key to space
 let mapleader=" "
@@ -127,6 +138,8 @@ let g:user_emmet_leader_key='<C-M>'
 
 "python checker
 let g:syntastic_python_checkers=['flake8']
+"auto open errors
+let g:syntastic_auto_loc_list = 1
 
 "Auto close preview
 "let g:ycm_autoclose_preview_window_after_completion=1
@@ -154,3 +167,6 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 " make YCM compatible with UltiSnips 
 let g:ycm_key_list_select_completion = ['<C-n>']
 let g:ycm_key_list_previous_completion = ['<C-p>']
+
+"Quickly run python file
+map <F5> :w !python3 %<CR>
