@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
+"Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 
