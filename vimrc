@@ -39,7 +39,6 @@ Plugin 'honza/vim-snippets'
 "powerline
 Plugin 'Lokaltog/vim-powerline'
 
-
 "color
 Plugin 'kamwitsta/nordisk'
 Plugin 'dracula/vim'
@@ -98,7 +97,7 @@ set backspace=indent,eol,start
 
 set modifiable
 "auto use the vimrc after save.
-"autocmd bufwritepost .vimrc source %
+autocmd bufwritepost .vimrc source %
 
 "Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -106,6 +105,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Buffer select
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
