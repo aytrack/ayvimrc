@@ -21,6 +21,10 @@ Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
+<<<<<<< HEAD
+=======
+"Plugin 'nvie/vim-flake8'
+>>>>>>> 5f98b2c9f2db2c57c7667ab26a396ac5d19875d5
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 
@@ -39,11 +43,18 @@ Plugin 'honza/vim-snippets'
 "powerline
 Plugin 'Lokaltog/vim-powerline'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f98b2c9f2db2c57c7667ab26a396ac5d19875d5
 "color
 Plugin 'kamwitsta/nordisk'
 Plugin 'dracula/vim'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f98b2c9f2db2c57c7667ab26a396ac5d19875d5
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -98,7 +109,7 @@ set backspace=indent,eol,start
 
 set modifiable
 "auto use the vimrc after save.
-"autocmd bufwritepost .vimrc source %
+autocmd bufwritepost .vimrc source %
 
 "Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -106,6 +117,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+<<<<<<< HEAD
+=======
+"Buffer select
+>>>>>>> 5f98b2c9f2db2c57c7667ab26a396ac5d19875d5
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
