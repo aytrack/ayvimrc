@@ -72,7 +72,6 @@ set nu
 set relativenumber
 
 "Set the mouse
-"set mouse=a
 set mouse=v
 
 "Number of spaces that a pre-existing tab is equal to.
@@ -167,6 +166,3 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 " make YCM compatible with UltiSnips 
 let g:ycm_key_list_select_completion = ['<C-n>']
 let g:ycm_key_list_previous_completion = ['<C-p>']
-
-"Quickly run python file
-map <F5> :w !python3 %<CR>
