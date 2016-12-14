@@ -21,7 +21,6 @@ Plugin 'tpope/vim-fugitive'
 
 "syntax checker
 Plugin 'vim-syntastic/syntastic'
-"Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 
@@ -36,9 +35,11 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'tell-k/vim-autopep8'
 
 "powerline
 Plugin 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
+
 
 "color
 Plugin 'kamwitsta/nordisk'
@@ -55,6 +56,7 @@ set splitright
 "For full syntax highlighting
 syntax on
 set t_Co=256 
+
 "python highlighting
 let python_highlight_all = 1
 
@@ -99,7 +101,10 @@ set backspace=indent,eol,start
 
 set modifiable
 "auto use the vimrc after save.
-autocmd bufwritepost .vimrc source %
+"autocmd bufwritepost .vimrc source %
+
+"colorschema
+colorscheme dracula
 
 "Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -107,7 +112,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Buffer select
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
