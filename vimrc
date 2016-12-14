@@ -38,7 +38,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tell-k/vim-autopep8'
 
 "powerline
-Plugin 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/vim-powerline'
 
 
 "color
@@ -89,6 +89,25 @@ set autoindent
 
 "Wrap text after a certain number of characters
 set textwidth=79
+set wrap
+set colorcolumn=85
+set formatoptions=qrnl
+
+"Search model
+vnoremap / /\v                 
+nnoremap / /\v
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set showmatch
+
+"Cancel search highlight
+nnoremap <leader><space> :noh <CR>
+
+""Use tab to match 
+nnoremap <tab> %
+vnoremap <tab> %
 
 "Set the default file encoding to UTF-8
 set encoding=utf-8
@@ -142,7 +161,13 @@ let g:user_emmet_leader_key='<C-M>'
 "python checker
 let g:syntastic_python_checkers=['flake8']
 "auto open errors
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_chechk_on_wq = 0
+"Checker statusline
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 "Auto close preview
 "let g:ycm_autoclose_preview_window_after_completion=1
