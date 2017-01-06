@@ -137,7 +137,8 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
 "Set the leader key to space
-let mapleader=" "
+"let mapleader=" "
+map <space> <leader>
 
 "powerline 
 let g:Powerline_symbols = 'fancy'
