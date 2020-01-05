@@ -5,11 +5,9 @@
 " set nocompatible              " be iMproved, required
 " filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-
-" let Vundle manage Vundle, required
+" Using vim-plug to manage plug.
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ 
+" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
 "filesystem
